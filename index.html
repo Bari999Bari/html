@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Geolacation</title>
+</head>
+<body>
+<div id="d"></div>
+<script type="text/javascript">
+var d = document.getElementById("d");
+navigator.geolocation.getCurrentPosition(
+	function(position) {
+		d.innerHTML = "Ваши координаты " + 
+		position.coords.latitude + " " +
+		position.coords.longitude;
+	});
+</script>
+</body>
+</html>
